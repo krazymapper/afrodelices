@@ -5,16 +5,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { signIn } from 'next-auth/react';
-import { Language } from '@/types';
 import { translations } from '@/translations';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import FormInput from '@/components/FormInput';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function SignUp() {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
-  const [language, setLanguage] = useState<Language>('fr');
+  const { language, setLanguage } = useLanguage();
   const t = translations[language].auth.signup;
   const errors = translations[language].auth.errors;
 

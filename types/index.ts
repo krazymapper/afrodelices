@@ -1,4 +1,18 @@
-export type Language = 'en' | 'fr';
+export type Language = 'fr';
+
+export type GeographicalArea = 'West Africa' | 'East Africa' | 'North Africa' | 'South Africa' | 'Central Africa' | 'Madagascar';
+
+export type MealType = 'Lunch' | 'Dinner';
+
+export interface Recipe {
+  id: string;
+  name: string;
+  description: string;
+  geographicalArea: GeographicalArea;
+  mealType: MealType[];
+  therapeuticProperties?: string[];
+  image: string;
+}
 
 export interface Translations {
   auth: {
@@ -24,4 +38,13 @@ export interface Translations {
       genericError: string;
     };
   };
+  title: string;
+  subtitle: string;
+  searchPlaceholder: string;
+  allRegions: string;
+  allMealTypes: string;
+  noRecipesFound: string;
+  tryAdjusting: string;
+  regions: Record<GeographicalArea, string>;
+  mealTypes: Record<MealType, string>;
 } 

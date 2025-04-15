@@ -1,31 +1,6 @@
 import { Translations } from '@/types';
 
 export const translations: Record<string, Translations> = {
-  en: {
-    auth: {
-      signup: {
-        title: 'Create your account',
-        subtitle: 'Join the community of African cuisine lovers',
-        orSignIn: 'Or',
-        signInLink: 'sign in to your account',
-        fullName: 'Full Name',
-        email: 'Email address',
-        password: 'Password',
-        confirmPassword: 'Confirm Password',
-        createAccount: 'Create account',
-        creatingAccount: 'Creating account...',
-        orContinueWith: 'Or continue with',
-        continueWithGoogle: 'Continue with Google',
-        discover: 'Discover African Cuisine',
-        joinCommunity: 'Join our community of food lovers and explore authentic recipes from across Africa',
-      },
-      errors: {
-        allFieldsRequired: 'All fields are required',
-        passwordsDontMatch: 'Passwords do not match',
-        genericError: 'An error occurred. Please try again.',
-      },
-    },
-  },
   fr: {
     auth: {
       signup: {
@@ -50,5 +25,24 @@ export const translations: Record<string, Translations> = {
         genericError: 'Une erreur est survenue. Veuillez réessayer.',
       },
     },
-  },
+    title: "Découvrez la Cuisine Africaine & Malgache",
+    subtitle: "Explorez plus de 300 recettes authentiques avec des instructions détaillées et leurs propriétés thérapeutiques",
+    searchPlaceholder: "Rechercher des recettes...",
+    allRegions: "Toutes les Régions",
+    allMealTypes: "Tous les Types de Repas",
+    noRecipesFound: "Aucune recette trouvée",
+    tryAdjusting: "Essayez d'ajuster vos critères de recherche ou vos filtres",
+    regions: {
+      "West Africa": "Afrique de l'Ouest",
+      "East Africa": "Afrique de l'Est",
+      "North Africa": "Afrique du Nord",
+      "South Africa": "Afrique du Sud",
+      "Central Africa": "Afrique Centrale",
+      "Madagascar": "Madagascar"
+    },
+    mealTypes: {
+      "Lunch": "Déjeuner",
+      "Dinner": "Dîner"
+    }
+  }
 }; 

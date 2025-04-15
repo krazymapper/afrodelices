@@ -1,12 +1,15 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { GeographicalArea, MealType, Recipe } from './types';
-import RecipeCard from './components/RecipeCard';
-import RecipeOfTheDay from './components/RecipeOfTheDay';
-import { mockRecipes } from './data/mockRecipes';
+import { GeographicalArea, MealType, Recipe } from '@/types';
+import { translations } from '@/translations';
+import RecipeCard from '@/components/RecipeCard';
+import RecipeOfTheDay from '@/components/RecipeOfTheDay';
+import { mockRecipes } from '@/data/mockRecipes';
 
 export default function Home() {
+  const t = translations.fr;
+  
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedArea, setSelectedArea] = useState<GeographicalArea | ''>('');
   const [selectedMealType, setSelectedMealType] = useState<MealType | ''>('');
@@ -37,10 +40,10 @@ export default function Home() {
     <div className="space-y-8">
       <section className="text-center space-y-4">
         <h1 className="text-4xl font-bold text-gray-900">
-          Discover African & Malagasy Cuisine
+          {t.title}
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Explore over 300 authentic recipes with detailed instructions and therapeutic properties
+          {t.subtitle}
         </p>
       </section>
 
@@ -51,7 +54,7 @@ export default function Home() {
           <div className="flex-1">
             <input
               type="text"
-              placeholder="Search recipes..."
+              placeholder={t.searchPlaceholder}
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -63,10 +66,10 @@ export default function Home() {
               value={selectedArea}
               onChange={(e) => setSelectedArea(e.target.value as GeographicalArea | '')}
             >
-              <option value="">All Regions</option>
+              <option value="">{t.allRegions}</option>
               {geographicalAreas.map((area) => (
                 <option key={area} value={area}>
-                  {area}
+                  {t.regions[area]}
                 </option>
               ))}
             </select>
@@ -75,10 +78,10 @@ export default function Home() {
               value={selectedMealType}
               onChange={(e) => setSelectedMealType(e.target.value as MealType | '')}
             >
-              <option value="">All Meal Types</option>
+              <option value="">{t.allMealTypes}</option>
               {mealTypes.map((type) => (
                 <option key={type} value={type}>
-                  {type}
+                  {t.mealTypes[type]}
                 </option>
               ))}
             </select>
@@ -93,9 +96,9 @@ export default function Home() {
           ))
         ) : (
           <div className="col-span-full text-center py-8">
-            <h3 className="text-xl font-semibold text-gray-900">No recipes found</h3>
+            <h3 className="text-xl font-semibold text-gray-900">{t.noRecipesFound}</h3>
             <p className="text-gray-600 mt-2">
-              Try adjusting your search criteria or filters
+              {t.tryAdjusting}
             </p>
           </div>
         )}
