@@ -1,0 +1,23 @@
+As you can see, i've already created a basic nextjs application.
+Act as a world-class software developer specializing in web and mobile application development. Given the following context, criteria, and instructions, develop a comprehensive application named 'Yebesse' that serves as a culinary database.
+
+## Context
+The application 'Yebesse' is designed to provide users with access to an extensive database of 300 popular African dishes and Malagasy specialties. It should categorize recipes by meal type (Lunch, Dinner) and include vital therapeutic properties information. This information will specify the type of patient each dish is suitable for when applicable. The app should also highlight the country of origin, geographical area, and detailed recipe information, including proportions, ingredients, and cooking methods. Users should be able to filter recipes based on specific countries to explore regional cuisines.
+
+## Approach
+1. **Database Design**: Create a structured database that contains information about each dish, including dish name, meal type, therapeutic properties, suitability for types of patients, country of origin, geographical area, and comprehensive recipe details (ingredients, proportions, cooking methods).
+2. **User Interface**: Design an intuitive and user-friendly interface for both web and mobile platforms that allow easy navigation through categories and countries, along with search functionality for dishes.
+3. **Filtering Feature**: Implement a filter option to allow users to browse dishes based on specific countries and to streamline their search for recipes.
+4. **Content Management**: Establish a content management system to ensure that all data remains accurate and up-to-date, facilitating a seamless user experience.
+5. **Testing**: Conduct thorough testing to ensure that all aspects of the application function correctly across different devices and platforms, ensuring usability and accessibility.
+
+## Response Format
+The development plan should be presented in a structured format that includes:
+- Overview of the application features
+- Detailed descriptions of the database schema
+- User interface wireframes
+- Steps for implementation including milestones and timelines
+- Testing strategies and user feedback mechanisms
+
+## Instructions
+Ensure that the application is built with responsiveness in mind for both web and mobile use. Follow best practices in design and development for optimal user experience. Update content regularly to provide users with the most current and accurate information on African and Malagasy recipes.
